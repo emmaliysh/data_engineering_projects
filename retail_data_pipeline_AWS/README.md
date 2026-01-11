@@ -7,6 +7,9 @@ This project demonstrates an automated, serverless batch ETL pipeline on AWS for
 
 The pipeline ingests raw retail datasets uploaded to Amazon S3 and automatically processes them using AWS serverless services. Terraform is used to define and deploy all cloud resources, ensuring reproducibility, consistency, and easy teardown. The goal is to build a scalable ETL workflow that extracts, transforms, and loads retail data while enabling event-driven notifications and interactive querying of curated data.
 
+## Pipeline Design
+
+![Retail pipeline design](retail_pipeline_design.png)
 
 ## Architecture & Workflow
 * Infrastructure Provisioning (Terraform): Terraform modules provision S3 buckets, IAM roles, Lambda functions, Glue jobs, EventBridge rules, SNS topics, and Athena configurations.
@@ -20,11 +23,6 @@ The pipeline ingests raw retail datasets uploaded to Amazon S3 and automatically
 * Event Notifications: Amazon EventBridge tracks pipeline events and routes them to SNS, sending real-time notifications (email alerts) when jobs complete.
 
 * Data Querying: Curated datasets are stored back in S3 and can be queried using AWS Athena for analytics and reporting.
-
-
-## Pipeline Design
-
-![Retail pipeline design](retail_pipeline_design.png)
 
 
 ## Technologies Used
