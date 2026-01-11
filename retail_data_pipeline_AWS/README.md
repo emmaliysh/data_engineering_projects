@@ -1,15 +1,15 @@
 
-# Retail Data ETL Pipeline on AWS (Batch Processing)
+# Retail Data ETL Pipeline on AWS with Terraform (Batch Processing)
 
-This project demonstrates an automated, serverless batch ETL pipeline on AWS for processing raw retail data. It is designed for beginners in cloud computing and data engineering, showing how to integrate core AWS services to move data from raw storage to curated datasets, ready for analysis.
-
+This project demonstrates an automated, serverless batch ETL pipeline on AWS for processing raw retail data. It shows how to integrate core AWS services using Terraform to move data from raw storage to curated datasets, ready for analysis.
 
 ## Project Overview
 
-The pipeline ingests raw retail datasets uploaded to Amazon S3 and automates their processing using AWS serverless services. The main goal is to extract, transform, and load (ETL) retail data efficiently while enabling real-time notifications and easy querying of curated data.
+The pipeline ingests raw retail datasets uploaded to Amazon S3 and automatically processes them using AWS serverless services. Terraform is used to define and deploy all cloud resources, ensuring reproducibility, consistency, and easy teardown. The goal is to build a scalable ETL workflow that extracts, transforms, and loads retail data while enabling event-driven notifications and interactive querying of curated data.
 
 
 ## Architecture & Workflow
+Infrastructure Provisioning (Terraform): Terraform modules provision S3 buckets, IAM roles, Lambda functions, Glue jobs, EventBridge rules, SNS topics, and Athena configurations.
 
 Data Ingestion: Upload raw retail files (CSV) to an S3 bucket.
 
@@ -28,6 +28,7 @@ Data Querying: Curated datasets are stored back in S3 and can be queried using A
 
 
 ## Technologies Used
+Terraform – Infrastructure as Code for provisioning and managing AWS resources
 
 Amazon S3 – Storage for raw and curated datasets
 
