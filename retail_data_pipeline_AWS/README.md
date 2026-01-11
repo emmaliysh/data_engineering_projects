@@ -9,17 +9,17 @@ The pipeline ingests raw retail datasets uploaded to Amazon S3 and automatically
 
 
 ## Architecture & Workflow
-Infrastructure Provisioning (Terraform): Terraform modules provision S3 buckets, IAM roles, Lambda functions, Glue jobs, EventBridge rules, SNS topics, and Athena configurations.
+* Infrastructure Provisioning (Terraform): Terraform modules provision S3 buckets, IAM roles, Lambda functions, Glue jobs, EventBridge rules, SNS topics, and Athena configurations.
 
-Data Ingestion: Upload raw retail files (CSV) to an S3 bucket.
+* Data Ingestion: Upload raw retail files (CSV) to an S3 bucket.
 
-Triggering the Pipeline: An AWS Lambda function detects new files in S3 and initiates the ETL process.
+* Triggering the Pipeline: An AWS Lambda function detects new files in S3 and initiates the ETL process.
 
-Data Transformation: AWS Glue jobs curate the raw retail data.
+* Data Transformation: AWS Glue jobs curate the raw retail data.
 
-Event Notifications: Amazon EventBridge tracks pipeline events and routes them to SNS, sending real-time notifications (email alerts) when jobs complete.
+* Event Notifications: Amazon EventBridge tracks pipeline events and routes them to SNS, sending real-time notifications (email alerts) when jobs complete.
 
-Data Querying: Curated datasets are stored back in S3 and can be queried using AWS Athena for analytics and reporting.
+* Data Querying: Curated datasets are stored back in S3 and can be queried using AWS Athena for analytics and reporting.
 
 
 ## Pipeline Design
@@ -30,12 +30,12 @@ Data Querying: Curated datasets are stored back in S3 and can be queried using A
 ## Technologies Used
 * Terraform – Infrastructure as Code for provisioning and managing AWS resources
 
-Amazon S3 – Storage for raw and curated datasets
+* Amazon S3 – Storage for raw and curated datasets
 
-AWS Lambda – Event-driven function to trigger ETL jobs
+* AWS Lambda – Event-driven function to trigger ETL jobs
 
-AWS Glue – Serverless ETL service for data transformation
+* AWS Glue – Serverless ETL service for data transformation
 
-Amazon EventBridge & Amazon SNS – Notifications for monitoring pipeline events
+* Amazon EventBridge & Amazon SNS – Notifications for monitoring pipeline events
 
-AWS Athena – Querying curated datasets
+* AWS Athena – Querying curated datasets
