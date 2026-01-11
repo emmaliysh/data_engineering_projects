@@ -5,7 +5,6 @@
 
 This project is an end‑to‑end real‑time data pipeline that captures live stock market data and transforms it into analytics‑ready insights using a modern data stack. The pipeline streams data from the Finnhub Stock API, processes and stores it with Apache Kafka, and orchestrates transformations with Airflow, DBT, and Snowflake — all while being fully containerized with Docker for scalable deployment. 
 
-
 ## Pipeline design
 
 ![stock pipeline design](stock_pipeline_design.png)
