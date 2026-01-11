@@ -28,7 +28,7 @@ Data Querying: Curated datasets are stored back in S3 and can be queried using A
 
 
 ## Technologies Used
-Terraform – Infrastructure as Code for provisioning and managing AWS resources
+* Terraform – Infrastructure as Code for provisioning and managing AWS resources
 
 Amazon S3 – Storage for raw and curated datasets
 
