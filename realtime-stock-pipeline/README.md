@@ -1,5 +1,5 @@
 
-# Streaming Healthcare Data Engineering Pipeline for Patient Admission & Discharge (Azure)
+# Real-Time Stock Market Data Pipeline
 
 ## Introduction
 
